@@ -1,0 +1,76 @@
+/* ==UserStyle==
+@name           Custom Twitch Settings
+@description    Custom Twitch Settings
+@namespace      github.com/GrimmDeth/CustomTwitchSettings
+@homepageURL    https://github.com/GrimmDeth/CustomTwitchSettings
+@version        1.0.0
+@updateURL      https://raw.githubusercontent.com/GrimmDeth/CustomTwitchSettings/master/CustomTwitchSettings.user.css
+@author         GrimmDeth
+@license        GNU-V3.0
+==/UserStyle== */
+
+@-moz-document domain("twitch.tv") {
+    /* Sitewide Adjustments */
+    body {
+        font-family: Helvetica Neue,Helvetica,Arial,sans-serif !important;
+    }
+    h1 {
+        font-size: 4rem !important;
+    }
+    [class*="input"]:focus, [class*="textarea"]:focus, [class*="select"]:focus {
+        background: #212126 !important;
+    }
+    /* Rounded User Images */
+    .tw-border-radius-rounded, .tw-root--theme-dark .tw-border-radius-rounded, .tw-root--theme-light .tw-border-radius-rounded {
+        border-radius: 14% !important;
+    }
+    /* Directory Top */
+    .tw-root--theme-dark .directory-header-new__banner-cover {
+        background: #151515 !important;
+    }
+    .following-root-page__wrapper {
+        max-width: 100% !important;
+    }
+
+    /* Video Player Adjustments */
+    /* Size Adjustments */
+    .video-player .player, .persistent-player, .channel-page__video-player, .highwind-video-player__container--resize-calc, .video-player__container--resize-calc {
+        max-height: calc(100vh) !important;
+    }
+    /* Gradients */
+    .top-bar, .pl-controls-top {
+        background: linear-gradient(180deg,rgba(0,0,0,.5) 0,rgba(0,0,0,.15) 60%,transparent) !important;
+    }
+    .player-controls, .pl-controls-bottom {
+        background: linear-gradient(0deg,rgba(0,0,0,.5) 0,rgba(0,0,0,.15) 60%,transparent) !important;
+    }
+    /* Live Status Gradient */
+    .player-streamstatus {
+        background: radial-gradient(ellipse farthest-side at 150% -80%,#000 0,transparent 100%) !important;
+    }
+    .preview-card-stat--live, .tw-root--theme-dark .preview-card-stat--live, .tw-root--theme-light .preview-card-stat--live {
+        opacity: 0.7 !important;
+    }
+    /* Hides Extension Overlays */
+    .extensions-dock__layout, .extension-frame-wrapper, .extension-view__iframe, .extensions-video-overlay-size-container {
+        display: none !important;
+    }
+    div[class="tw-absolute tw-block tw-full-height tw-full-width tw-left-0 tw-top-0"] {
+        display: none !important;
+    }
+
+    /* Channel Adjustments */
+    /* Chatbox Width */
+    .right-column--beside .channel-root__right-column {
+        width: 36.5rem !important;
+    }
+    /* Whispers */
+    .bttv-auto-hide-conversations .whispers .whispers-threads-box__container {
+        bottom: -30px!important;
+        transition: bottom 100ms ease-in-out !important;
+        opacity: 0.6 !important;
+    }
+    .bttv-auto-hide-conversations:hover .whispers:hover .whispers-threads-box__container:hover {
+        opacity: 1 !important;
+    }
+}
