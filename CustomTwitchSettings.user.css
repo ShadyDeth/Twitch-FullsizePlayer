@@ -28,7 +28,7 @@
     .tw-root--theme-dark .directory-header-new__banner-cover {
         background: #151515 !important;
     }
-    .following-root-page__wrapper {
+    .following-root-page__wrapper, .directory-root-page__content, .directory-header-new__info {
         max-width: 100% !important;
     }
 
