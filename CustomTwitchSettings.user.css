@@ -3,7 +3,7 @@
 @description    Custom Twitch Settings
 @namespace      github.com/GrimmDeth/CustomTwitchSettings
 @homepageURL    https://github.com/GrimmDeth/CustomTwitchSettings
-@version        1.0.2
+@version        1.0.3
 @updateURL      https://raw.githubusercontent.com/GrimmDeth/CustomTwitchSettings/master/CustomTwitchSettings.user.css
 @author         GrimmDeth
 @license        GNU-V3.0
@@ -11,9 +11,6 @@
 
 @-moz-document domain("twitch.tv") {
     /* Sitewide Adjustments */
-    body {
-        font-family: Helvetica Neue,Helvetica,Arial,sans-serif !important;
-    }
     h1 {
         font-size: 4rem !important;
     }
