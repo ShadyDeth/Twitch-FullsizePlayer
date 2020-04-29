@@ -11,9 +11,6 @@
 
 @-moz-document domain("twitch.tv") {
     /* Sitewide Adjustments */
-    h1 {
-        font-size: 4rem !important;
-    }
     [class*="input"]:focus, [class*="textarea"]:focus, [class*="select"]:focus {
         background: #212126 !important;
     }
@@ -25,7 +22,7 @@
     .tw-root--theme-dark .directory-header-new__banner-cover {
         background: #151515 !important;
     }
-    .following-root-page__wrapper, .directory-root-page__content, .directory-header-new__info, .browse-root-page__wrapper {
+    .following-root-page__wrapper, .directory-root-page__content, .directory-header-new__info, .browse-root-page__wrapper, .esports-directory-home-header, .esports-directory__category-selector, .esports-directory__body {
         max-width: 100% !important;
     }
 
