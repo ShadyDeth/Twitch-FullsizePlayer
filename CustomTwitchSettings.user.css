@@ -3,7 +3,7 @@
 @description    Custom Twitch Settings
 @namespace      github.com/GrimmDeth/CustomTwitchSettings
 @homepageURL    https://github.com/GrimmDeth/CustomTwitchSettings
-@version        1.0.4
+@version        1.0.5
 @updateURL      https://raw.githubusercontent.com/GrimmDeth/CustomTwitchSettings/master/CustomTwitchSettings.user.css
 @author         GrimmDeth
 @license        GNU-V3.0
@@ -19,9 +19,6 @@
         border-radius: 14% !important;
     }
     /* Directory Top */
-    .tw-root--theme-dark .directory-header-new__banner-cover {
-        background: #151515 !important;
-    }
     .following-root-page__wrapper, .directory-root-page__content, .directory-header-new__info, .browse-root-page__wrapper, .esports-directory-home-header, .esports-directory__category-selector, .esports-directory__body {
         max-width: 100% !important;
     }
