@@ -3,7 +3,7 @@
 @description    Custom Twitch Settings
 @namespace      github.com/GrimmDeth/CustomTwitchSettings
 @homepageURL    https://github.com/GrimmDeth/CustomTwitchSettings
-@version        1.0.6
+@version        1.0.7
 @updateURL      https://raw.githubusercontent.com/GrimmDeth/CustomTwitchSettings/master/CustomTwitchSettings.user.css
 @author         GrimmDeth
 @license        GNU-V3.0
@@ -30,7 +30,7 @@
         max-height: calc(100vh - 130px) !important;
     }
     .persistent-player {
-        max-width: calc(100% - 415px) !important;
+        max-width: calc(100% - 417px) !important;
     }
     /* Gradients */
     .top-bar, .pl-controls-top {
@@ -66,8 +66,8 @@
         width: 5rem !important;
     }    
     /* Hide Tags - Holy fuck im lazy and this is ugly */
-        #root > div > div.tw-flex.tw-flex-column.tw-flex-nowrap.tw-full-height > div > main > div.root-scrollable.scrollable-area.scrollable-area--suppress-scroll-x > div.simplebar-scroll-content > div > div > div.channel-root.channel-root--watch-chat.channel-root--live.channel-root--watch.channel-root--unanimated > div.channel-root__main--with-chat.tw-flex.tw-flex-column > div.channel-root__info.channel-root__info--with-chat > div > div.tw-flex-grow-0.tw-flex-shrink-1 > div > div > div.tw-align-items-start.tw-flex.tw-flex-grow-1.tw-flex-shrink-1.tw-justify-content-start.tw-pd-1 > div > div.tw-flex.tw-flex-column.tw-mg-b-1.tw-mg-t-05 > div > div.tw-mg-t-1 {
-            display: none !important;
+    #root > div > div.tw-flex.tw-flex-column.tw-flex-nowrap.tw-full-height > div > main > div.root-scrollable.scrollable-area.scrollable-area--suppress-scroll-x > div.simplebar-scroll-content > div > div > div.channel-root.channel-root--watch-chat.channel-root--live.channel-root--watch.channel-root--unanimated > div.channel-root__main--with-chat.tw-flex.tw-flex-column > div.channel-root__info.channel-root__info--with-chat > div > div.tw-flex-grow-0.tw-flex-shrink-1 > div > div > div {
+        margin: 0 0 0 1rem !important;
     }
     /* Channel Info */
     .channel-root__info, .channel-root__info--with-chat {
