@@ -15,6 +15,7 @@
     [class*="input"]:focus, [class*="textarea"]:focus, [class*="select"]:focus {
         background: #212126 !important;
     }
+    
     /* Rounded User Images */
     .tw-border-radius-rounded, .tw-root--theme-dark .tw-border-radius-rounded, .tw-root--theme-light .tw-border-radius-rounded {
         border-radius: 14% !important;
@@ -27,11 +28,12 @@
     /* Video Player Adjustments */
     /* Size Adjustments */
     .video-player .player, .persistent-player, .channel-page__video-player, .highwind-video-player__container--resize-calc, .video-player__container--resize-calc {
-        max-height: calc(100vh - 130px) !important;
+        max-height: calc(100vh) !important;
     }
     .persistent-player {
-        max-width: calc(100% - 417px) !important;
+        max-width: calc(100% - 340px) !important;
     }
+    
     /* Gradients */
     .top-bar, .pl-controls-top {
         background: linear-gradient(180deg,rgba(0,0,0,.5) 0,rgba(0,0,0,.15) 60%,transparent) !important;
@@ -39,6 +41,7 @@
     .player-controls, .pl-controls-bottom {
         background: linear-gradient(0deg,rgba(0,0,0,.5) 0,rgba(0,0,0,.15) 60%,transparent) !important;
     }
+    
     /* Live Status Gradient */
     .player-streamstatus {
         background: radial-gradient(ellipse farthest-side at 150% -80%,#000 0,transparent 100%) !important;
@@ -71,15 +74,7 @@
     }
     /* Channel Info */
     .channel-root__info, .channel-root__info--with-chat {
-        margin-top: calc(100vh - 130px) !important;
-        width: calc(100% - 8rem) !important;
-    }
-    /* Chat */
-    .right-column--beside .channel-root__right-column {
-        width: 42rem !important;
-    }
-    .channel-root__right-column--expanded, .toggle-visibility__right-column--expanded {
-        transform: translateX(-42rem) !important;
+        margin-top: calc(100vh - 86px) !important;
     }
 
 }
