@@ -15,6 +15,11 @@
     [class*="input"]:focus, [class*="textarea"]:focus, [class*="select"]:focus {
         background: #212126 !important;
     }
+
+    .tw-elevation-1 {
+        box-shadow: 0 1px 2px rgba(0,0,0,0),0 0 2px rgba(0,0,0,0)!important;
+        box-shadow: var(--shadow-elevation-0)!important;
+    }
     
     /* Rounded User Images */
     .tw-border-radius-rounded, .tw-root--theme-dark .tw-border-radius-rounded, .tw-root--theme-light .tw-border-radius-rounded {
@@ -74,16 +79,13 @@
         margin-top: calc(100vh - 86px) !important;
     }
 
-    /* Hide Tags - Holy fuck im lazy and this is ugly */
+    /* Hide Tags - Holy fuck im lazy and this is ugly, but twitch doesnt want to name its divs */
     #root > div > div.tw-flex.tw-flex-column.tw-flex-nowrap.tw-full-height > div > main > div.root-scrollable.scrollable-area.scrollable-area--suppress-scroll-x > div.simplebar-scroll-content > div > div > div.channel-root.channel-root--watch-chat.channel-root--live.channel-root--watch.channel-root--unanimated > div.channel-root__main--with-chat.tw-flex.tw-flex-column > div.channel-root__info.channel-root__info--with-chat > div > div.tw-flex-grow-0.tw-flex-shrink-1 > div > div > div {
         margin: 0 0 0 1rem !important;
     }
 
-}
-
-@-moz-document regexp(".*twitch.tv/directory/following/live") {
-    
-    #root > div > div.tw-flex.tw-flex-column.tw-flex-nowrap.tw-full-height > div > main > div.root-scrollable.scrollable-area > div.simplebar-scroll-content > div > div > div > div > div:nth-child(1) {
+    #root > div > div.tw-flex.tw-flex-column.tw-flex-nowrap.tw-full-height > div > main > div.root-scrollable.scrollable-area.scrollable-area--suppress-scroll-x > div.simplebar-scroll-content > div > div > div.channel-root.channel-root--watch-chat.channel-root--live.channel-root--watch.channel-root--unanimated > div.channel-root__main--with-chat.tw-flex.tw-flex-column > div.channel-root__info.channel-root__info--with-chat > div > div.tw-flex-grow-0.tw-flex-shrink-1 > div > div > div > div.tw-flex.tw-flex-column.tw-full-width.tw-pd-x-1 > div.tw-flex.tw-flex-column.tw-xs-flex-row > div.tw-align-items-start.tw-flex.tw-flex-grow-1.tw-flex-shrink-1.tw-justify-content-start > div > div:nth-child(2) {
         display: none !important;
     }
+
 }
