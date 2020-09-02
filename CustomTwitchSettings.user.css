@@ -3,13 +3,30 @@
 @description    Custom Twitch Settings
 @namespace      github.com/DedZex/CustomTwitchSettings
 @homepageURL    https://github.com/DedZex/CustomTwitchSettings
-@version        1.0.11
+@version        1.0.12
 @updateURL      https://raw.githubusercontent.com/DedZex/CustomTwitchSettings/master/CustomTwitchSettings.user.css
 @author         DedZex
 @license        GNU-V3.0
+
+@preprocessor stylus
+
+@var select stylus-browser "Browser" [
+	"Brave",
+	"Chrome"
+]
+
 ==/UserStyle== */
 
 @-moz-document domain("twitch.tv") {
+
+    :root {
+		if stylus-browser == "Brave" {
+			--channel-root__info: 90px;
+		}
+		if stylus-browser == "Chrome" {
+			--channel-root__info: 86px;
+        }
+    }
 
     /* Sitewide Adjustments */
     [class*="input"]:focus, [class*="textarea"]:focus, [class*="select"]:focus {
@@ -76,7 +93,7 @@
 
     /* Channel Info */
     .channel-root__info, .channel-root__info--with-chat {
-        margin-top: calc(100vh - 86px) !important;
+        margin-top: calc(100vh - var(--channel-root__info)) !important;
     }
 
     /* Hide Tags - Holy fuck im lazy and this is ugly, but twitch doesnt want to name its divs */
@@ -85,6 +102,11 @@
     }
 
     #root > div > div.tw-flex.tw-flex-column.tw-flex-nowrap.tw-full-height > div > main > div.root-scrollable.scrollable-area.scrollable-area--suppress-scroll-x > div.simplebar-scroll-content > div > div > div.channel-root.channel-root--watch-chat.channel-root--live.channel-root--watch.channel-root--unanimated > div.channel-root__main--with-chat.tw-flex.tw-flex-column > div.channel-root__info.channel-root__info--with-chat > div > div.tw-flex-grow-0.tw-flex-shrink-1 > div > div > div > div.tw-flex.tw-flex-column.tw-full-width.tw-pd-x-1 > div.tw-flex.tw-flex-column.tw-xs-flex-row > div.tw-align-items-start.tw-flex.tw-flex-grow-1.tw-flex-shrink-1.tw-justify-content-start > div > div:nth-child(2) {
+        display: none !important;
+    }
+
+    /* Extension Edits */
+    #bttv-picture-in-picture {
         display: none !important;
     }
 
