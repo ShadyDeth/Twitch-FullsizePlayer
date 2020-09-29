@@ -3,7 +3,7 @@
 @description    Custom Twitch Settings
 @namespace      github.com/DedZex/CustomTwitchSettings
 @homepageURL    https://github.com/DedZex/CustomTwitchSettings
-@version        1.0.13
+@version        1.0.14
 @updateURL      https://raw.githubusercontent.com/DedZex/CustomTwitchSettings/master/CustomTwitchSettings.user.css
 @author         DedZex
 @license        GNU-V3.0
@@ -43,7 +43,7 @@
         border-radius: 14% !important;
     }
     /* Directory Top */
-    .following-root-page__wrapper, .directory-root-page__content, .directory-header-new__info, .browse-root-page__wrapper, .esports-directory-home-header, .esports-directory__category-selector, .esports-directory__body {
+    .common-centered-column {
         max-width: 100% !important;
     }
 
@@ -99,6 +99,10 @@
     /* Hide Tags - Holy fuck im lazy and this is ugly, but twitch doesnt want to name its divs */
     #root > div > div.tw-flex.tw-flex-column.tw-flex-nowrap.tw-full-height > div > main > div.root-scrollable.scrollable-area.scrollable-area--suppress-scroll-x > div.simplebar-scroll-content > div > div > div.channel-root.channel-root--watch-chat.channel-root--live.channel-root--watch.channel-root--unanimated > div.channel-root__main--with-chat.tw-flex.tw-flex-column > div.channel-root__info.channel-root__info--with-chat > div > div.tw-flex-grow-0.tw-flex-shrink-1 > div > div > div {
         margin: 0 0 0 1rem !important;
+    }
+    
+    #root > div > div.tw-flex.tw-flex-column.tw-flex-nowrap.tw-full-height > div > main > div.root-scrollable.scrollable-area.scrollable-area--suppress-scroll-x > div.simplebar-scroll-content > div > div > div.channel-root.channel-root--watch-chat.channel-root--live.channel-root--watch.channel-root--unanimated > div.channel-root__main--with-chat.tw-flex.tw-flex-column > div.channel-root__info.channel-root__info--with-chat > div > div.tw-flex-grow-0.tw-flex-shrink-1 > div > div > div > div.tw-flex.tw-flex-column.tw-full-width.tw-pd-x-1 > div.metadata-layout__support.tw-align-items-baseline.tw-flex.tw-flex-wrap-reverse.tw-justify-content-between > div.tw-flex.tw-flex-grow-1.tw-justify-content-end > div.tw-accent-region > div {
+        padding-top: 3px !important;
     }
 
     /* Extension Edits */
