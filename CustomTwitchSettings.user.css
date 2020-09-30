@@ -3,7 +3,7 @@
 @description    Custom Twitch Settings
 @namespace      github.com/DedZex/CustomTwitchSettings
 @homepageURL    https://github.com/DedZex/CustomTwitchSettings
-@version        1.0.14
+@version        1.0.15
 @updateURL      https://raw.githubusercontent.com/DedZex/CustomTwitchSettings/master/CustomTwitchSettings.user.css
 @author         DedZex
 @license        GNU-V3.0
@@ -43,7 +43,7 @@
         border-radius: 14% !important;
     }
     /* Directory Top */
-    .common-centered-column {
+    .common-centered-column, .directory-header-new__info {
         max-width: 100% !important;
     }
 
