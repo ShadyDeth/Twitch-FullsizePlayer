@@ -3,7 +3,7 @@
 @description    Custom Twitch Settings
 @namespace      github.com/ShadyDeth/CustomTwitchSettings
 @homepageURL    https://github.com/ShadyDeth/CustomTwitchSettings
-@version        1.0.16
+@version        1.0.17
 @updateURL      https://raw.githubusercontent.com/ShadyDeth/CustomTwitchSettings/master/CustomTwitchSettings.user.css
 @author         ShadyDeth
 @license        GNU-V3.0
@@ -19,95 +19,118 @@
 
 @-moz-document domain("twitch.tv") {
 
-    :root {
+	:root {
 		if stylus-browser == "Brave" {
-			--channel-root__info: 90px;
+			--channel-root__info: 50px;
 		}
 		if stylus-browser == "Chrome" {
-			--channel-root__info: 86px;
-        }
-    }
+			--channel-root__info: 46px;
+		}
+	}
 
-    /* Sitewide Adjustments */
-    [class*="input"]:focus, [class*="textarea"]:focus, [class*="select"]:focus {
-        background: #212126 !important;
-    }
+	/* Sitewide Adjustments */
+	#sideNav {
+		display: none !important;
+	}
+	
+	[class*="input"]:focus, [class*="textarea"]:focus, [class*="select"]:focus {
+		background: #212126 !important;
+	}
+	
+	.tw-elevation-1 {
+		box-shadow: 0 1px 2px rgba(0,0,0,0),0 0 2px rgba(0,0,0,0) !important;
+		box-shadow: var(--shadow-elevation-0) !important;
+	}
+	
+	/* Rounded User Images */
+	.tw-border-radius-rounded, .tw-root--theme-dark .tw-border-radius-rounded, .tw-root--theme-light .tw-border-radius-rounded {
+		border-radius: 14% !important;
+	}
+	
+	/* Directory Top */
+	.common-centered-column, .directory-header-new__info {
+		max-width: 100% !important;
+	}
 
-    .tw-elevation-1 {
-        box-shadow: 0 1px 2px rgba(0,0,0,0),0 0 2px rgba(0,0,0,0)!important;
-        box-shadow: var(--shadow-elevation-0)!important;
-    }
-    
-    /* Rounded User Images */
-    .tw-border-radius-rounded, .tw-root--theme-dark .tw-border-radius-rounded, .tw-root--theme-light .tw-border-radius-rounded {
-        border-radius: 14% !important;
-    }
-    /* Directory Top */
-    .common-centered-column, .directory-header-new__info {
-        max-width: 100% !important;
-    }
+	/* Video Player Adjustments */
+	/* Size Adjustments */
+	.video-player .player, .persistent-player, .channel-page__video-player, .highwind-video-player__container--resize-calc, .video-player__container--resize-calc {
+		max-height: calc(100vh) !important;
+	}
+	
+	.persistent-player {
+		max-width: calc(100% - 318px) !important;
+	}
+	
+	/* Gradients */
+	.top-bar, .pl-controls-top {
+		background: linear-gradient(180deg,rgba(0,0,0,.5) 0,rgba(0,0,0,.15) 60%,transparent) !important;
+	}
+	
+	.player-controls, .pl-controls-bottom {
+		background: linear-gradient(0deg,rgba(0,0,0,.5) 0,rgba(0,0,0,.15) 60%,transparent) !important;
+	}
+	
+	/* Live Status Gradient */
+	.player-streamstatus {
+		background: radial-gradient(ellipse farthest-side at 150% -80%,#000 0,transparent 100%) !important;
+	}
+	
+	.preview-card-stat--live, .tw-root--theme-dark .preview-card-stat--live, .tw-root--theme-light .preview-card-stat--live {
+		opacity: 0.7 !important;
+	}
 
-    /* Video Player Adjustments */
-    /* Size Adjustments */
-    .video-player .player, .persistent-player, .channel-page__video-player, .highwind-video-player__container--resize-calc, .video-player__container--resize-calc {
-        max-height: calc(100vh) !important;
-    }
-    .persistent-player {
-        max-width: calc(100% - 340px) !important;
-    }
-    
-    /* Gradients */
-    .top-bar, .pl-controls-top {
-        background: linear-gradient(180deg,rgba(0,0,0,.5) 0,rgba(0,0,0,.15) 60%,transparent) !important;
-    }
-    .player-controls, .pl-controls-bottom {
-        background: linear-gradient(0deg,rgba(0,0,0,.5) 0,rgba(0,0,0,.15) 60%,transparent) !important;
-    }
-    
-    /* Live Status Gradient */
-    .player-streamstatus {
-        background: radial-gradient(ellipse farthest-side at 150% -80%,#000 0,transparent 100%) !important;
-    }
-    .preview-card-stat--live, .tw-root--theme-dark .preview-card-stat--live, .tw-root--theme-light .preview-card-stat--live {
-        opacity: 0.7 !important;
-    }
+	/* Hides Extension Overlays */
+	.extensions-dock__layout, .extension-frame-wrapper, .extension-view__iframe, .extensions-video-overlay-size-container {
+		display: none !important;
+	}
+	
+	div[class="tw-absolute tw-block tw-full-height tw-full-width tw-left-0 tw-top-0"] {
+		display: none !important;
+	}
 
-    /* Hides Extension Overlays */
-    .extensions-dock__layout, .extension-frame-wrapper, .extension-view__iframe, .extensions-video-overlay-size-container {
-        display: none !important;
-    }
-    div[class="tw-absolute tw-block tw-full-height tw-full-width tw-left-0 tw-top-0"] {
-        display: none !important;
-    }
+	/* Channel Adjustments */
+	/* Avatar */
+	.user-avatar-animated__halo {
+		height: 58px !important;
+		width: 58px !important;
+	}
+	
+	.tw-avatar--size-64 {
+		height: 5rem !important;
+		width: 5rem !important;
+	}
 
-    /* Channel Adjustments */
-    /* Avatar */
-    .user-avatar-animated__halo {
-        height: 58px !important;
-        width: 58px !important;
-    }
-    .tw-avatar--size-64 {
-        height: 5rem !important;
-        width: 5rem !important;
-    }
+	/* Channel Info */
+	.channel-root__info, .channel-root__info--with-chat {
+		margin-top: calc(100vh - var(--channel-root__info)) !important;
+	}
+	
+	.channel-root--hold-chat+.persistent-player, .channel-root--watch-chat+.persistent-player, .channel-root__info--with-chat .channel-info-content, .channel-root__player--with-chat {
+		width: calc(100% - 31.8rem) !important;
+	}
 
-    /* Channel Info */
-    .channel-root__info, .channel-root__info--with-chat {
-        margin-top: calc(100vh - var(--channel-root__info)) !important;
-    }
+	/* Chat */
+	.chat-shell__expanded {
+		min-width: 31.8rem !important;
+	}
 
-    /* Hide Tags - Holy fuck im lazy and this is ugly, but twitch doesnt want to name its divs */
-    #root > div > div.tw-flex.tw-flex-column.tw-flex-nowrap.tw-full-height > div > main > div.root-scrollable.scrollable-area.scrollable-area--suppress-scroll-x > div.simplebar-scroll-content > div > div > div.channel-root.channel-root--watch-chat.channel-root--live.channel-root--watch.channel-root--unanimated > div.channel-root__main--with-chat.tw-flex.tw-flex-column > div.channel-root__info.channel-root__info--with-chat > div > div.tw-flex-grow-0.tw-flex-shrink-1 > div > div > div {
-        margin: 0 0 0 1rem !important;
-    }
-    
-    #root > div > div.tw-flex.tw-flex-column.tw-flex-nowrap.tw-full-height > div > main > div.root-scrollable.scrollable-area.scrollable-area--suppress-scroll-x > div.simplebar-scroll-content > div > div > div.channel-root.channel-root--watch-chat.channel-root--live.channel-root--watch.channel-root--unanimated > div.channel-root__main--with-chat.tw-flex.tw-flex-column > div.channel-root__info.channel-root__info--with-chat > div > div.tw-flex-grow-0.tw-flex-shrink-1 > div > div > div > div.tw-flex.tw-flex-column.tw-full-width.tw-pd-x-1 > div.metadata-layout__support.tw-align-items-baseline.tw-flex.tw-flex-wrap-reverse.tw-justify-content-between > div.tw-flex.tw-flex-grow-1.tw-justify-content-end > div.tw-accent-region > div {
-        padding-top: 3px !important;
-    }
+	.toggle-visibility__right-column--expanded {
+		transform: translateX(-31.8rem) !important;
+	}
 
-    /* Extension Edits */
-    #bttv-picture-in-picture {
-        display: none !important;
-    }
+	.channel-root__right-column, .channel-root__right-column--expanded {
+		width: 31.8rem !important;
+		transform: translateX(-31.8rem) translateZ(0px) !important;
+	}
+
+	.chat-line__message, .chat-line__moderation, .chat-line__status {
+		padding: .5rem 1rem !important;
+	}
+
+	/* Extension Edits */
+	#bttv-picture-in-picture {
+		display: none !important;
+	}
 
 }
