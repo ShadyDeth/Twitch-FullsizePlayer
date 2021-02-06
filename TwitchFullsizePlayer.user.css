@@ -3,7 +3,7 @@
 @description    Fullsize video player for Twitch.tv website
 @namespace      github.com/ShadyDeth/Twitch-FullsizePlayer
 @homepageURL    https://github.com/ShadyDeth/Twitch-FullsizePlayer
-@version        1.1.1
+@version        1.1.2
 @updateURL      https://raw.githubusercontent.com/ShadyDeth/Twitch-FullsizePlayer/master/TwitchFullsizePlayer.user.css
 @author         ShadyDeth
 @license        GNU-V3.0
@@ -14,9 +14,11 @@
 	"Brave",
 	"Chrome"
 ]
-@var checkbox hide-leftsidebar "Hide Left Sidebar" 0
+@var checkbox rs-avatars "Rounded Square Avatars" 0
 @var checkbox hide-extensions "Hide Extensions" 0
 @var checkbox hide-topblackbar "Hide Top Nav Black Bar" 0
+@var checkbox hide-leftsidebar "Hide Left Sidebar" 0
+@var checkbox hide-bookmarksbar "Not using Browser Bookmarks Bar" 0
 
 ==/UserStyle== */
 
@@ -24,12 +26,16 @@
 
 	:root {
 		if browser == "Brave" {
-			--channel-root__info: 50px;
-			--channel-root__info2: 78px;
+			--channel-root__info: 78px;
+			--channel-root__info1: 50px;
+			--channel-root__info2: 110px;
+			--channel-root__info3: 82px;
 		}
 		if browser == "Chrome" {
-			--channel-root__info: 46px;
-			--channel-root__info2: 74px;
+			--channel-root__info: 78px;
+			--channel-root__info1: 50px;
+			--channel-root__info2: 110px;
+			--channel-root__info3: 82px;
 		}
 	}
 
@@ -48,8 +54,10 @@
 	}
 
 	/* Rounded User Images */
-	.tw-border-radius-rounded, .tw-root--theme-dark .tw-border-radius-rounded, .tw-root--theme-light .tw-border-radius-rounded {
-		border-radius: 14% !important;
+	if rs-avatars {
+		.tw-border-radius-rounded, .tw-root--theme-dark .tw-border-radius-rounded, .tw-root--theme-light .tw-border-radius-rounded {
+			border-radius: 14% !important;
+		}
 	}
 	
 	/* Directory Top */
@@ -95,12 +103,6 @@
 		.extensions-dock__layout, .extension-frame-wrapper, .extension-view__iframe, .extensions-video-overlay-size-container {
 			display: none !important;
 		}
-		
-		/* //What does this do??? Disabling for now.
-		div[class="tw-absolute tw-block tw-full-height tw-full-width tw-left-0 tw-top-0"] {
-			display: none !important;
-		}
-		*/
 	}
 
 	/* Channel Adjustments */
@@ -118,13 +120,31 @@
 	}
 
 	/* Channel Info */
-	.channel-root__info, .channel-root__info--with-chat {
-		margin-top: calc(100vh - var(--channel-root__info2)) !important;
+	if hide-leftsidebar == '1' && hide-bookmarksbar == '1' {
+		.channel-root__info, .channel-root__info--with-chat {
+			margin-top: calc(100vh - var(--channel-root__info3)) !important;
+			transform: unset !important;
+		}
 	}
-	
-	if hide-leftsidebar {
+
+	else if hide-leftsidebar == '1' {
+		.channel-root__info, .channel-root__info--with-chat {
+			margin-top: calc(100vh - var(--channel-root__info1)) !important;
+			transform: unset !important;
+		}
+	}
+
+	else if hide-bookmarksbar == '1' {
+		.channel-root__info, .channel-root__info--with-chat {
+			margin-top: calc(100vh - var(--channel-root__info2)) !important;
+			transform: unset !important;
+		}
+	}
+
+	else {
 		.channel-root__info, .channel-root__info--with-chat {
 			margin-top: calc(100vh - var(--channel-root__info)) !important;
+			transform: unset !important;
 		}
 	}
 	
