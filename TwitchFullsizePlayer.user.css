@@ -3,7 +3,7 @@
 @description    Fullsize video player for Twitch.tv website
 @namespace      github.com/ShadyDeth/Twitch-FullsizePlayer
 @homepageURL    https://github.com/ShadyDeth/Twitch-FullsizePlayer
-@version        1.1.4
+@version        1.1.5
 @updateURL      https://raw.githubusercontent.com/ShadyDeth/Twitch-FullsizePlayer/master/TwitchFullsizePlayer.user.css
 @author         ShadyDeth
 @license        GNU-V3.0
@@ -47,15 +47,14 @@
 	}
 
 	if hide-topblackbar {
-		.tw-elevation-1 {
-			box-shadow: 0 1px 2px rgba(0,0,0,0),0 0 2px rgba(0,0,0,0) !important;
+		.cPVNOL {
 			box-shadow: var(--shadow-elevation-0) !important;
 		}
 	}
 
 	/* Rounded User Images */
 	if rs-avatars {
-		.tw-border-radius-rounded, .tw-root--theme-dark .tw-border-radius-rounded, .tw-root--theme-light .tw-border-radius-rounded {
+		.iyfkau, .channel-info-content .tw-halo, .channel-info-content .tw-halo:before {
 			border-radius: 14% !important;
 		}
 	}
@@ -106,19 +105,6 @@
 	}
 
 	/* Channel Adjustments */
-	/* Avatar */
-	.user-avatar-animated__halo {
-		height: 58px !important;
-		width: 58px !important;
-		-webkit-animation: none !important;
-		animation: none !important;
-	}
-	
-	.tw-avatar--size-64 {
-		height: 5rem !important;
-		width: 5rem !important;
-	}
-
 	/* Channel Info */
 	if hide-leftsidebar == '1' && hide-bookmarksbar == '1' {
 		.channel-root__info, .channel-root__info--with-chat {
