@@ -3,17 +3,23 @@
 @description    Fullsize video player for Twitch.tv website
 @namespace      github.com/ShadyDeth/Twitch-FullsizePlayer
 @homepageURL    https://github.com/ShadyDeth/Twitch-FullsizePlayer
-@version        1.1.7
+@version        1.1.8
 @updateURL      https://raw.githubusercontent.com/ShadyDeth/Twitch-FullsizePlayer/master/TwitchFullsizePlayer.user.css
 @author         ShadyDeth
 @license        GNU-V3.0
 
 @preprocessor stylus
 
-@var select browser "Browser" [
-	"Brave",
-	"Chrome"
+@var select taskbar "Taskbar Size" [
+	"Normal",
+	"Small"
 ]
+
+@var select browser "Browser" [
+	"Chrome",
+	"Brave"
+]
+
 @var checkbox rs-avatars "Rounded Square Avatars" 0
 @var checkbox hide-extensions "Hide Extensions" 0
 @var checkbox hide-topblackbar "Hide Top Nav Black Bar" 0
@@ -37,6 +43,14 @@
 			--channel-root__info2: 110px;
 			--channel-root__info3: 82px;
 		}
+		if taskbar == "Normal" {
+			--taskbar-size: 35.8rem;
+			--taskbar-size2: -35.8rem;
+		}
+		if taskbar == "Small" {
+			--taskbar-size: 31.8rem;
+			--taskbar-size2: -31.8rem;
+		}
 	}
 
 	/* Sitewide Adjustments */
@@ -47,17 +61,14 @@
 	}
 
 	if hide-topblackbar {
-		.gJbMyx {
+		.top-nav__menu {
 			box-shadow: var(--shadow-elevation-0) !important;
 		}
 	}
 
 	/* Rounded User Images */
 	if rs-avatars {
-		.iyfkau, .channel-info-content .tw-halo, .channel-info-content .tw-halo:before {
-			border-radius: 14% !important;
-		}
-		.hYROTF {
+		.tw-image-avatar, .channel-info-content .tw-halo, .channel-info-content .tw-halo:before {
 			border-radius: 14% !important;
 		}
 	}
@@ -138,21 +149,21 @@
 	}
 	
 	.channel-root--hold-chat+.persistent-player, .channel-root--watch-chat+.persistent-player, .channel-root__info--with-chat .channel-info-content, .channel-root__player--with-chat {
-		width: calc(100% - 31.8rem) !important;
+		width: calc(100% - var(--taskbar-size)) !important;
 	}
 
 	/* Chat */
 	.chat-shell__expanded {
-		min-width: 31.8rem !important;
+		min-width: var(--taskbar-size) !important;
 	}
 
 	.toggle-visibility__right-column--expanded {
-		transform: translateX(-31.8rem) !important;
+		transform: translateX(var(--taskbar-size2)) !important;
 	}
 
 	.channel-root__right-column, .channel-root__right-column--expanded {
-		width: 31.8rem !important;
-		transform: translateX(-31.8rem) translateZ(0px) !important;
+		width: var(--taskbar-size) !important;
+		transform: translateX(var(--taskbar-size2)) translateZ(0px) !important;
 	}
 
 	.chat-line__message, .chat-line__moderation, .chat-line__status {
