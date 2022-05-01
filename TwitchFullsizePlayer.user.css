@@ -68,7 +68,7 @@
 
 	/* Rounded User Images */
 	if rs-avatars {
-		.tw-image-avatar, .channel-info-content .tw-halo, .channel-info-content .tw-halo:before {
+		.tw-image-avatar, .tw-halo, .tw-halo:before {
 			border-radius: 14% !important;
 		}
 	}
