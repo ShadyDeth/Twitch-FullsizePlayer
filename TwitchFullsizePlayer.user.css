@@ -3,7 +3,7 @@
 @description    Fullsize video player for Twitch.tv website
 @namespace      github.com/ShadyDeth/Twitch-FullsizePlayer
 @homepageURL    https://github.com/ShadyDeth/Twitch-FullsizePlayer
-@version        1.1.9
+@version        1.1.10
 @updateURL      https://raw.githubusercontent.com/ShadyDeth/Twitch-FullsizePlayer/master/TwitchFullsizePlayer.user.css
 @author         ShadyDeth
 @license        GNU-V3.0
@@ -45,7 +45,7 @@
 		}
 		if taskbar == "Normal" {
 			--player-size: 35.8rem;
-			--chat-size2: -35.8rem;
+			--chat-size: -35.8rem;
 		}
 		if taskbar == "Small" {
 			--player-size: 32.6rem;
